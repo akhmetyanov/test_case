@@ -1,0 +1,8 @@
+<div 
+class="popup"
+[style.display]="visible"
+[style.top]="position.top + 'px'"
+[style.left]="position.left + 'px'"
+>
+    <app-popup-data [data]="data" (selected)="onSelectItem($event)"></app-popup-data>
+</div>

@@ -1,0 +1,34 @@
+<div class="editor-wrapper" *ngIf="visible">
+    <div class="editor">
+        <div class="editor__lable">
+            <div class="content">
+                Редактирование файла: {{ dataToEdit.name }}
+            </div>
+            
+        </div>
+        <div class="hor-line"></div>
+        <div class="editor__content">
+            <div 
+                class="input" 
+                contenteditable="true"
+                #data$
+                >
+                {{ dataToEdit.data }}
+            </div>
+        </div>
+        <div class="hor-line"></div>
+        <div class="editor__actions">
+            <div class="button">
+                <div class="button__contetn" (click)="onSave(data$.innerText)">
+                    Сохранить
+                </div>
+            </div>
+
+            <div class="button">
+                <div class="button__contetn" (click)="onClose()">
+                    Закрыть
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

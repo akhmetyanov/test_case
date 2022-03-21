@@ -1,0 +1,12 @@
+<div class="data">
+    <div 
+        class="data__items"
+        *ngFor="let d of data"
+    >
+
+        <div class="data__item" (click)="onSelectItem(d)">
+            {{ d.lable }}
+        </div>
+        
+    </div>
+</div>

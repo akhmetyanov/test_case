@@ -1,0 +1,16 @@
+.data {
+
+    &__items {
+
+    }
+
+    &__item {
+        padding: 5px;
+        margin: 2.5px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(245, 245, 245);
+        }
+    }
+}

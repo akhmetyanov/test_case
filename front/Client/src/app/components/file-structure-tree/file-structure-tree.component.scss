@@ -1,0 +1,71 @@
+.nested {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid grey;
+}
+
+.folder {
+    user-select: none;
+    display: flex;
+    
+    &__selected {
+        background-color: rgb(245, 245, 245);
+    }
+
+    &__name {
+        &:hover {
+            cursor: pointer;
+
+            &::before {
+                background-color: rgb(245, 245, 245);
+            }
+        }
+    }
+
+    &__disposer {
+
+        &::before {
+            content: "\2212";
+            display: inline-flex;
+            margin-right: 5px;
+            margin-left: 5px;
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::before {
+                background-color: rgb(245, 245, 245);
+            }
+        }
+    }
+}
+
+
+.folder-down {
+    &::before {
+        content: "\002B";
+    }
+}
+
+.disable {
+    display: none;
+}
+
+.item {
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(245, 245, 245);
+    }
+
+    user-select: none;
+    margin: 3px;
+    padding: 4px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}

@@ -1,0 +1,21 @@
+<div class="input-wrapper" *ngIf="textInputService.visible">
+    <div class="input">
+        <div class="input__lable">
+            {{ textInputService.lable }}
+        </div>
+        <div class="input__input">
+            <input type="text" #input>
+        </div>
+        <div class="input__action">
+
+            <div class="button" (click)="onOkClick(input.value)">
+                <div class="button__content">Принять</div>
+            </div>
+
+            <div class="button" (click)="onCancelClick()">
+                <div class="button__content">Отмена</div>
+            </div>
+            
+        </div>
+    </div>
+</div>

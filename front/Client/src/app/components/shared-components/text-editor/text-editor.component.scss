@@ -1,0 +1,52 @@
+.editor-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.editor {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 1000px;
+    height: calc(100% - 22px);
+
+    margin: auto;
+
+    &__lable {
+        font-weight: bold;
+        font-size: large;
+        border-bottom: 1px ;
+        height: 40px;
+        display: flex;
+    }
+
+    &__content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: calc(100% - (40px + 32px + 10px + 2px + 20px));
+
+        .input {
+            height: 100%;
+            overflow-y: scroll;
+        }
+    }
+
+    &__actions {
+        padding-top: 10px;
+        height: 32px;
+        display: flex;
+    }
+}
+
+.hor-line {
+    border-bottom: 1px solid gray;
+}
+
+.content {
+    margin: auto;
+}

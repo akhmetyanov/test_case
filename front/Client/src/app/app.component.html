@@ -1,0 +1,20 @@
+<div class="app">
+
+    <div class="app__file-structure">
+
+        <app-file-structure-tree [fileStructire]="fileStructire"></app-file-structure-tree>
+
+        <div class="button app__file-structure-button" (click)="onCreateRootFolder()">
+            <div class="button__content">
+                Создать коренную папку
+            </div>
+        </div>
+
+    </div>
+    
+
+    <app-folder-content class="app__folder-contetn"></app-folder-content>
+
+    <app-text-editor></app-text-editor>
+
+</div>

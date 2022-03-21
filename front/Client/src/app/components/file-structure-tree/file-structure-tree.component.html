@@ -1,0 +1,63 @@
+<div 
+    *ngFor="let file of fileStructire"
+    (contextmenu)="onContextMenu($event, file)"
+    >
+    <ng-container *ngIf="file.children.length > 0 then folder else folderContent">
+
+    </ng-container>
+
+    <ng-template #folder>
+        <div 
+            class="folder" 
+            (click)="onSelecParentFolder(file)"
+        >
+
+        <div class="folder__disposer" #disposer (click)="onDisposerClick(content, disposer)"></div>
+
+        <div class="folder__name">
+            <img src="assets/img/folder.png" class="icon">
+            {{ file.name }}
+        </div>
+        
+    </div>
+        <div class="folder-content" #content>
+            <div class="nested">
+                <app-file-structure-tree [fileStructire]="file.children"></app-file-structure-tree>
+            </div>
+        </div>
+    </ng-template>
+
+
+    <ng-template #folderContent>
+        <div class="item" (click)="onSelecItem(file)">
+            <div *ngIf="file.extension == 0">
+                <img src="assets/img/folder.png" class="icon">
+                {{ file.name }}
+            </div>
+
+            <div *ngIf="file.extension == 1">
+                <img src="assets/img/points.png" class="icon">
+                {{ file.name }}
+            </div>
+
+            <div *ngIf="file.extension == 2">
+                <img src="assets/img/polyline.png" class="icon">
+                {{ file.name }}
+            </div>
+
+            <div *ngIf="file.extension == 3">
+                <img src="assets/img/polygone.png" class="icon">
+                {{ file.name }}
+            </div>
+
+            <div *ngIf="file.extension == 4">
+                <img src="assets/img/text_file.png" class="icon">
+                {{ file.name }}
+            </div>
+
+        </div>
+    </ng-template>
+
+</div>
+
+<app-popup></app-popup>

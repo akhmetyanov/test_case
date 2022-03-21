@@ -1,0 +1,44 @@
+.table {
+    user-select: none;
+
+    &__header-row {
+        display: flex;
+        background-color: rgb(245, 245, 245);
+    }
+
+    &__header-cell {
+
+        .cell-content {
+            padding: 5px;
+        }
+    }
+
+    &__body-row {
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(245, 245, 245);
+        }
+    }
+
+    &__body-cell {
+        padding: 5px 0px 5px 0px;
+    }
+}
+
+#col0 {
+    width: 250px;
+}
+
+#col1 {
+    width: 100px;
+}
+
+#col2 {
+    width: 150px;
+}
+
+#col3 {
+    width: 150px;
+}

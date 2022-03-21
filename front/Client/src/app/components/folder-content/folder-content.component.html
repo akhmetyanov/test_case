@@ -1,0 +1,14 @@
+<div 
+    *ngIf="parentBySelected" 
+    class="contetn"
+    (contextmenu)="onContentRigthClick($event)"
+    >
+    <app-folder-content-items [data]="parentBySelected.children"></app-folder-content-items>
+</div>
+
+<div *ngIf="!parentBySelected">
+    <p>Выберите элемент из меню-дерева</p>
+</div>
+
+<app-popup></app-popup>
+<app-text-input></app-text-input>

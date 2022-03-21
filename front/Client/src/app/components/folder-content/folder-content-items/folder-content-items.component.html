@@ -1,0 +1,64 @@
+<div class="table">
+
+    <div class="table__header" #header>
+
+        <div class="table__header-row">
+
+            <div class="table__header-cell" id="col0">
+                <div class="cell-content">
+                    Имя
+                </div>
+            </div>
+
+            <div class="table__header-cell" id="col1">
+                <div class="cell-content">
+                    Расширение
+                </div>
+            </div>
+
+            <div class="table__header-cell" id="col2">
+                <div class="cell-content">
+                    Дата создания
+                </div>
+            </div>
+
+            <div class="table__header-cell" id="col3">
+                <div class="cell-content">
+                    Дата обновления
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="table__body" #body>
+
+        <div class="table__body-row" (dblclick)="onDblClickToUp()">
+            <div class="table__body-cell">
+                ..
+            </div>
+        </div>
+
+        <div 
+            *ngFor="let item of data" 
+            class="table__body-row" 
+            (dblclick)="onDblClickToItem(item)" 
+            (contextmenu)="onContextMenu($event, item)">
+            <div class="table__body-cell" id="col0">
+                {{ item.name }}
+            </div>
+            <div class="table__body-cell" id="col1">
+                {{ item.extension | fileExtention }}
+            </div>
+            <div class="table__body-cell" id="col2">
+                {{ item.createdDate }}
+            </div>
+            <div class="table__body-cell" id="col3">
+                {{ item.updatedDate }}
+            </div>
+        </div>
+
+    </div>
+
+</div>
